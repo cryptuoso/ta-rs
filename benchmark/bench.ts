@@ -1,4 +1,4 @@
-import b from 'benny'
+/*import b from 'benny'
 
 import { plus100 } from '../index'
 
@@ -26,3 +26,4 @@ async function run() {
 run().catch((e) => {
   console.error(e)
 })
+*/
