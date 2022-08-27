@@ -11,7 +11,7 @@
   "files": [
     "ta-rs.darwin-arm64.node"
   ],
-  "description": "Technical Analysis Node bindings from Rust",
+  "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "keywords": [
     "napi-rs",
     "NAPI",
