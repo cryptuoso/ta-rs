@@ -188,24 +188,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm-eabi@npm:1.2.242":
-  version: 1.2.242
-  resolution: "@swc/core-android-arm-eabi@npm:1.2.242"
-  dependencies:
-    "@swc/wasm": 1.2.122
-  conditions: os=android & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@swc/core-android-arm64@npm:1.2.242":
-  version: 1.2.242
-  resolution: "@swc/core-android-arm64@npm:1.2.242"
-  dependencies:
-    "@swc/wasm": 1.2.130
-  conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@swc/core-darwin-arm64@npm:1.2.242":
   version: 1.2.242
   resolution: "@swc/core-darwin-arm64@npm:1.2.242"
@@ -295,8 +277,6 @@ __metadata:
   version: 1.2.242
   resolution: "@swc/core@npm:1.2.242"
   dependencies:
-    "@swc/core-android-arm-eabi": 1.2.242
-    "@swc/core-android-arm64": 1.2.242
     "@swc/core-darwin-arm64": 1.2.242
     "@swc/core-darwin-x64": 1.2.242
     "@swc/core-freebsd-x64": 1.2.242
@@ -309,10 +289,6 @@ __metadata:
     "@swc/core-win32-ia32-msvc": 1.2.242
     "@swc/core-win32-x64-msvc": 1.2.242
   dependenciesMeta:
-    "@swc/core-android-arm-eabi":
-      optional: true
-    "@swc/core-android-arm64":
-      optional: true
     "@swc/core-darwin-arm64":
       optional: true
     "@swc/core-darwin-x64":
@@ -338,13 +314,6 @@ __metadata:
   bin:
     swcx: run_swcx.js
   checksum: 1f5473c7af0f714c99d632c85322f0e72d2cac6fc99d0bdd389ab12818107da2c71c34ce43476a72533f9f342d1ec116feed5380afae9be2edf456d8ecc0a423
-  languageName: node
-  linkType: hard
-
-"@swc/wasm@npm:1.2.122":
-  version: 1.2.122
-  resolution: "@swc/wasm@npm:1.2.122"
-  checksum: 563345370c5ad18373d3b403590ab880fe52dcd8fc8c8601be263fcd9886520b28a7f4e46236cf49ca2b136c79d4ef50c960bc34b7cdc2068118b0d84dfca1f4
   languageName: node
   linkType: hard
 

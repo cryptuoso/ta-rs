@@ -1,9 +1,10 @@
-/*import test from 'ava'
+import test from 'ava'
 
-import { plus100 } from '../index'
+import { SMA } from '../index'
 
-test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+test('SMA', async (t) => {
+  const sma = new SMA(10, 0)
+  const result = await sma.next(1)
+  t.is(result, 0.1)
 })
-*/
+//TODO: add more tests
