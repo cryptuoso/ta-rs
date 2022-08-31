@@ -13,6 +13,26 @@
 
 ## Node.js bindings for varios Rust based Technical Analysis methods and indicators
 
+## Support matrix
+
+### Operating Systems
+
+|                  | node14 | node16 | node18 |
+| ---------------- | ------ | ------ | ------ |
+| Windows x64      | ✓      | ✓      | ✓      |
+| Windows x32      | ✓      | ✓      | ✓      |
+| Windows arm64    | ✓      | ✓      | ✓      |
+| macOS x64        | ✓      | ✓      | ✓      |
+| macOS arm64      | ✓      | ✓      | ✓      |
+| Linux x64 gnu    | ✓      | ✓      | ✓      |
+| Linux x64 musl   | ✓      | ✓      | ✓      |
+| Linux arm gnu    | ✓      | ✓      | ✓      |
+| Linux arm64 gnu  | ✓      | ✓      | ✓      |
+| Linux arm64 musl | ✓      | ✓      | ✓      |
+| Android arm64    | x      | x      | x      |
+| Android armv7    | x      | x      | x      |
+| FreeBSD x64      | x      | x      | x      |
+
 ### Supports:
 
 - [YATA](https://github.com/amv-dev/yata)
