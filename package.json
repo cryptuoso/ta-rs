@@ -50,7 +50,7 @@
     "format:rs": "cargo fmt",
     "lint": "eslint . -c ./.eslintrc.yml",
     "prepublishOnly": "napi prepublish -t npm",
-    "test": "ava",
+    "test": "ava --timeout=2m",
     "version": "napi version"
   },
   "devDependencies": {
