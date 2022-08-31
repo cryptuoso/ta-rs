@@ -1,5 +1,33 @@
+use crate::Candle;
 use napi::bindgen_prelude::*;
 use yata::prelude::*;
+
+impl OHLCV for Candle {
+  #[inline]
+  fn open(&self) -> f64 {
+    self.open
+  }
+
+  #[inline]
+  fn high(&self) -> f64 {
+    self.high
+  }
+
+  #[inline]
+  fn low(&self) -> f64 {
+    self.low
+  }
+
+  #[inline]
+  fn close(&self) -> f64 {
+    self.close
+  }
+
+  #[inline]
+  fn volume(&self) -> f64 {
+    self.volume
+  }
+}
 
 macro_rules! yata_method_async {
   ($src_name:ident, $indicator_type: ty, $output_type: ty) => {
@@ -288,4 +316,4 @@ impl HighestLowestDelta {
   }
 }
 
-//TODO: other methods
+//TODO: other methods and indicators

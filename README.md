@@ -15,4 +15,33 @@
 
 ### Supports:
 
-- [YATA](https://github.com/amv-dev/yata) node.js bindings
+- [YATA](https://github.com/amv-dev/yata)
+  - SMA
+  - WMA
+  - EMA
+  - WSMA
+  - RMA
+  - SMM
+  - HMA
+  - SWMA
+  - LSMA
+  - Conv
+  - VWMA
+  - TRIMA
+  - Differential
+  - Sum
+  - ROC
+  - TSI
+  - StDev
+  - LinearVolatility
+  - CCI
+  - MeanAbsDev
+  - MedianAbsDev
+  - Vidya
+  - Cross
+  - ReversalSignal
+  - HighestLowestDelta
+- [TA](https://github.com/virtualritz/ta-rs)
+  - ADX
+  - RSI
+  - MACD

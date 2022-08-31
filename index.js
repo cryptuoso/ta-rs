@@ -22,6 +22,36 @@ function isMusl() {
 }
 
 switch (platform) {
+  case 'android':
+    switch (arch) {
+      case 'arm64':
+        localFileExisted = existsSync(join(__dirname, 'ta-rs.android-arm64.node'))
+        try {
+          if (localFileExisted) {
+            nativeBinding = require('./ta-rs.android-arm64.node')
+          } else {
+            nativeBinding = require('ta-rs-android-arm64')
+          }
+        } catch (e) {
+          loadError = e
+        }
+        break
+      case 'arm':
+        localFileExisted = existsSync(join(__dirname, 'ta-rs.android-arm-eabi.node'))
+        try {
+          if (localFileExisted) {
+            nativeBinding = require('./ta-rs.android-arm-eabi.node')
+          } else {
+            nativeBinding = require('ta-rs-android-arm-eabi')
+          }
+        } catch (e) {
+          loadError = e
+        }
+        break
+      default:
+        throw new Error(`Unsupported architecture on Android ${arch}`)
+    }
+    break
   case 'win32':
     switch (arch) {
       case 'x64':
@@ -189,6 +219,9 @@ if (!nativeBinding) {
 }
 
 const {
+  ADX,
+  RSI,
+  MACD,
   SMA,
   WMA,
   EMA,
@@ -219,6 +252,9 @@ const {
   HighestLowestDelta,
 } = nativeBinding
 
+module.exports.ADX = ADX
+module.exports.RSI = RSI
+module.exports.MACD = MACD
 module.exports.SMA = SMA
 module.exports.WMA = WMA
 module.exports.EMA = EMA
