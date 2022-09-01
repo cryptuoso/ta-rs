@@ -19,6 +19,9 @@
   ],
   "napi": {
     "name": "ta-rs",
+    "package": {
+      "name": "@cryptuoso/ta-rs"
+    },
     "triples": {
       "defaults": true,
       "additional": [
@@ -42,14 +45,14 @@
   "scripts": {
     "artifacts": "napi artifacts",
     "bench": "node -r @swc-node/register benchmark/bench.ts",
-    "build": "napi build --platform --release --js-package-name @cryptuoso/ta-rs --pipe \"prettier -w\"",
+    "build": "napi build --platform --release --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
     "format": "run-p format:prettier format:rs",
     "format:prettier": "prettier . -w",
     "format:rs": "cargo fmt",
     "lint": "eslint . -c ./.eslintrc.yml",
     "prepublishOnly": "napi prepublish -t npm",
-    "test": "ava --timeout=2m",
+    "test": "ava",
     "version": "napi version"
   },
   "devDependencies": {
@@ -87,7 +90,8 @@
     ],
     "environmentVariables": {
       "TS_NODE_PROJECT": "./tsconfig.json"
-    }
+    },
+    "timeout": "2m"
   },
   "prettier": {
     "printWidth": 120,
