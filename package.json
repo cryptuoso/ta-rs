@@ -1,6 +1,6 @@
 {
   "name": "ta-rs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "main": "index.js",
   "repository": "https://github.com/cryptuoso/ta-rs",
