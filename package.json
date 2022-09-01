@@ -95,9 +95,9 @@
   },
   "prettier": {
     "printWidth": 120,
-    "semi": false,
+    "semi": true,
     "trailingComma": "all",
-    "singleQuote": true,
+    "singleQuote": false,
     "arrowParens": "always"
   },
   "packageManager": "yarn@3.2.2"

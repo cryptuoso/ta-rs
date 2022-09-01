@@ -16,6 +16,26 @@ export interface MACDOutput {
   signal: number
   histogram: number
 }
+export class MaxADX {
+  constructor(period: number, adxPeriod: number)
+  next(value: number): Promise<number>
+}
+export class SMA {
+  constructor(period: number)
+  next(value: number): Promise<number>
+}
+export class EMA {
+  constructor(period: number)
+  next(value: number): Promise<number>
+}
+export class WMA {
+  constructor(period: number)
+  next(value: number): Promise<number>
+}
+export class ATR {
+  constructor(period: number)
+  next(value: number): Promise<number>
+}
 export class ADX {
   constructor(period: number)
   next(value: number): Promise<number>
@@ -28,16 +48,20 @@ export class MACD {
   constructor(fastPeriod: number, slowPeriod: number, signalPeriod: number)
   next(value: number): Promise<MACDOutput>
 }
-export class SMA {
-  constructor(period: number, initial: number)
+export class Maximum {
+  constructor(period: number)
   next(value: number): Promise<number>
 }
-export class WMA {
-  constructor(period: number, initial: number)
+export class Minimum {
+  constructor(period: number)
   next(value: number): Promise<number>
 }
-export class EMA {
-  constructor(period: number, initial: number)
+export class StandardDeviation {
+  constructor(period: number)
+  next(value: number): Promise<number>
+}
+export class MeanAbsoluteDeviation {
+  constructor(period: number)
   next(value: number): Promise<number>
 }
 export class WSMA {
@@ -100,19 +124,11 @@ export class TSI {
   next(value: number): Promise<number>
   getLastValue(): number
 }
-export class StDev {
-  constructor(period: number, initial: number)
-  next(value: number): Promise<number>
-}
 export class LinearVolatility {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
 export class CCI {
-  constructor(period: number, initial: number)
-  next(value: number): Promise<number>
-}
-export class MeanAbsDev {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }

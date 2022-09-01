@@ -21,13 +21,13 @@ npm install ta-rs
 ## Use
 
 ```js
-import { SMA } from 'ta-rs'
+import { SMA } from "ta-rs";
 
-const sma = new SMA(10, 0) // period = 0, initial value = 0
+const sma = new SMA(5); // period = 5
+await sma.next(10); // first value = 10
+const result = await sma.next(20); // current value = 20
 
-const result = await sma.next(12) // current value = 12
-
-console.log(result) // current result
+console.log(result); // current result = 15
 ```
 
 ## Supports:

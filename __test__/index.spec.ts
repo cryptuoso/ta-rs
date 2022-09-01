@@ -1,10 +1,11 @@
-import test from 'ava'
+import test from "ava";
 
-import { SMA } from '../index'
+import { SMA } from "../index";
 
-test('SMA', async (t) => {
-  const sma = new SMA(10, 0)
-  const result = await sma.next(1)
-  t.is(result, 0.1)
-})
+test("SMA", async (t) => {
+  const sma = new SMA(10);
+  await sma.next(10);
+  const result = await sma.next(20);
+  t.is(result, 15);
+});
 //TODO: add more tests

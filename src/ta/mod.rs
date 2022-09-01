@@ -86,9 +86,9 @@ macro_rules! ta_ind {
 pub(crate) use ta_ind;
 //SMA
 ta_ind!(
-  Sma,
-  "Sma",
-  SmaTask,
+  SMA,
+  "SMA",
+  AsyncSMA,
   ta::indicators::SimpleMovingAverage,
   u16,
   f64,

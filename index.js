@@ -219,12 +219,18 @@ if (!nativeBinding) {
 }
 
 const {
+  MaxADX,
+  SMA,
+  EMA,
+  WMA,
+  ATR,
   ADX,
   RSI,
   MACD,
-  SMA,
-  WMA,
-  EMA,
+  Maximum,
+  Minimum,
+  StandardDeviation,
+  MeanAbsoluteDeviation,
   WSMA,
   RMA,
   SMM,
@@ -239,10 +245,8 @@ const {
   Momentum,
   ROC,
   TSI,
-  StDev,
   LinearVolatility,
   CCI,
-  MeanAbsDev,
   MedianAbsDev,
   Vidya,
   Cross,
@@ -252,12 +256,18 @@ const {
   HighestLowestDelta,
 } = nativeBinding
 
+module.exports.MaxADX = MaxADX
+module.exports.SMA = SMA
+module.exports.EMA = EMA
+module.exports.WMA = WMA
+module.exports.ATR = ATR
 module.exports.ADX = ADX
 module.exports.RSI = RSI
 module.exports.MACD = MACD
-module.exports.SMA = SMA
-module.exports.WMA = WMA
-module.exports.EMA = EMA
+module.exports.Maximum = Maximum
+module.exports.Minimum = Minimum
+module.exports.StandardDeviation = StandardDeviation
+module.exports.MeanAbsoluteDeviation = MeanAbsoluteDeviation
 module.exports.WSMA = WSMA
 module.exports.RMA = RMA
 module.exports.SMM = SMM
@@ -272,10 +282,8 @@ module.exports.Sum = Sum
 module.exports.Momentum = Momentum
 module.exports.ROC = ROC
 module.exports.TSI = TSI
-module.exports.StDev = StDev
 module.exports.LinearVolatility = LinearVolatility
 module.exports.CCI = CCI
-module.exports.MeanAbsDev = MeanAbsDev
 module.exports.MedianAbsDev = MedianAbsDev
 module.exports.Vidya = Vidya
 module.exports.Cross = Cross
