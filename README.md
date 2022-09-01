@@ -4,14 +4,13 @@
 <br>
 
 <h2 align="center"><a href="https://cryptuoso.com">Cryptuoso - Cryptocurrency Trading Automation</a></h2>
-
+<h2 align="center">ta-rs</h3>
+<h3 align="center">Node.js bindings for varios Rust based Technical Analysis methods and indicators</h3>
 <br>
 <br>
 <br>
 
-# ⚠️ Under development! ⚠️
-
-## Node.js bindings for varios Rust based Technical Analysis methods and indicators
+### ⚠️ Under development! ⚠️
 
 ## Install
 
