@@ -9,7 +9,7 @@
   ],
   "main": "ta-rs.linux-arm-gnueabihf.node",
   "files": [
-    "ta-rs.linux-arm-gnueabihf.node"
+    "@cryptuoso/ta-rs.linux-arm-gnueabihf.node"
   ],
   "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "keywords": [

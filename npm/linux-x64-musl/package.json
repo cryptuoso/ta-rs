@@ -9,7 +9,7 @@
   ],
   "main": "ta-rs.linux-x64-musl.node",
   "files": [
-    "ta-rs.linux-x64-musl.node"
+    "@cryptuoso/ta-rs.linux-x64-musl.node"
   ],
   "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "keywords": [
