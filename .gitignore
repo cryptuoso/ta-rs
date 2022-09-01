@@ -119,6 +119,7 @@ dist
 /target
 Cargo.lock
 
+@cryptuoso
 *.node
 .pnp.*
 .yarn/*

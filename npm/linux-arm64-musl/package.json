@@ -1,5 +1,5 @@
 {
-  "name": "ta-rs-linux-arm64-musl",
+  "name": "@cryptuoso/ta-rs-linux-arm64-musl",
   "version": "0.0.2",
   "os": [
     "linux"

@@ -1,5 +1,5 @@
 {
-  "name": "ta-rs-linux-arm-gnueabihf",
+  "name": "@cryptuoso/ta-rs-linux-arm-gnueabihf",
   "version": "0.0.2",
   "os": [
     "linux"

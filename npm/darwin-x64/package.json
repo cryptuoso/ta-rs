@@ -1,5 +1,5 @@
 {
-  "name": "ta-rs-darwin-x64",
+  "name": "@cryptuoso/ta-rs-darwin-x64",
   "version": "0.0.2",
   "os": [
     "darwin"

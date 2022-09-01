@@ -1,8 +1,8 @@
 use napi::bindgen_prelude::*;
 use ta::Next;
 
-#[napi(object)]
-pub struct MovingAverageConvergenceDivergenceOutput {
+#[napi(object, js_name = "MACDOutput")]
+pub struct MACDOutput {
   pub macd: f64,
   pub signal: f64,
   pub histogram: f64,
@@ -14,13 +14,13 @@ struct AsyncMACD<'a>(
 );
 
 impl napi::Task for AsyncMACD<'_> {
-  type Output = MovingAverageConvergenceDivergenceOutput;
-  type JsValue = MovingAverageConvergenceDivergenceOutput;
+  type Output = MACDOutput;
+  type JsValue = MACDOutput;
 
   fn compute(&mut self) -> napi::Result<Self::Output> {
     let result = self.0.next(self.1);
 
-    Ok(MovingAverageConvergenceDivergenceOutput {
+    Ok(MACDOutput {
       macd: result.macd,
       signal: result.signal,
       histogram: result.histogram,

@@ -11,7 +11,7 @@ export interface Candle {
   close: number
   volume: number
 }
-export interface MovingAverageConvergenceDivergenceOutput {
+export interface MACDOutput {
   macd: number
   signal: number
   histogram: number
