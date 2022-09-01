@@ -2,9 +2,9 @@
  <img align="left" width="150" height="150" src="https://cryptuoso.com/favicon_color.svg">  
 </a> 
 <br>
-<a href="https://cryptuoso.com">
-<h2 align="center">Cryptuoso - Cryptocurrency Trading Automation</h2>
-</a> 
+
+<h2 align="center"><a href="https://cryptuoso.com">Cryptuoso - Cryptocurrency Trading Automation</a></h2>
+
 <br>
 <br>
 <br>
@@ -13,29 +13,27 @@
 
 ## Node.js bindings for varios Rust based Technical Analysis methods and indicators
 
-## Support matrix
+## Install
 
-### Operating Systems
+```bash
+npm install ta-rs
+```
 
-|                  | node14 | node16 | node18 |
-| ---------------- | ------ | ------ | ------ |
-| Windows x64      | ✓      | ✓      | ✓      |
-| Windows x32      | ✓      | ✓      | ✓      |
-| Windows arm64    | ✓      | ✓      | ✓      |
-| macOS x64        | ✓      | ✓      | ✓      |
-| macOS arm64      | ✓      | ✓      | ✓      |
-| Linux x64 gnu    | ✓      | ✓      | ✓      |
-| Linux x64 musl   | ✓      | ✓      | ✓      |
-| Linux arm gnu    | ✓      | ✓      | ✓      |
-| Linux arm64 gnu  | ✓      | ✓      | ✓      |
-| Linux arm64 musl | ✓      | ✓      | ✓      |
-| Android arm64    | x      | x      | x      |
-| Android armv7    | x      | x      | x      |
-| FreeBSD x64      | x      | x      | x      |
+## Use
 
-### Supports:
+```js
+import { SMA } from 'ta-rs'
 
-- [YATA](https://github.com/amv-dev/yata)
+const sma = new SMA(10, 0) // period = 0, initial value = 0
+
+const result = await sma.next(12) // current value = 12
+
+console.log(result) // current result
+```
+
+## Supports:
+
+- [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
   - SMA
   - WMA
   - EMA
@@ -61,7 +59,31 @@
   - Cross
   - ReversalSignal
   - HighestLowestDelta
-- [TA](https://github.com/virtualritz/ta-rs)
+- [TA](https://github.com/virtualritz/ta-rs) - Technical Analysis for Rust
   - ADX
   - RSI
   - MACD
+  - Minimum
+  - Maximum
+- Other
+  - MaxADX (Maximum + ADX from TA)
+
+---
+
+### Operating systems support matrix
+
+|                  | node14 | node16 | node18 |
+| ---------------- | ------ | ------ | ------ |
+| Windows x64      | ✓      | ✓      | ✓      |
+| Windows x32      | ✓      | ✓      | ✓      |
+| Windows arm64    | ✓      | ✓      | ✓      |
+| macOS x64        | ✓      | ✓      | ✓      |
+| macOS arm64      | ✓      | ✓      | ✓      |
+| Linux x64 gnu    | ✓      | ✓      | ✓      |
+| Linux x64 musl   | ✓      | ✓      | ✓      |
+| Linux arm gnu    | ✓      | ✓      | ✓      |
+| Linux arm64 gnu  | ✓      | ✓      | ✓      |
+| Linux arm64 musl | ✓      | ✓      | ✓      |
+| Android arm64    | x      | x      | x      |
+| Android armv7    | x      | x      | x      |
+| FreeBSD x64      | x      | x      | x      |

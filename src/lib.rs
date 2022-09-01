@@ -15,5 +15,6 @@ pub struct Candle {
   pub volume: f64,
 }
 
+pub mod custom;
 pub mod ta;
 pub mod yata;

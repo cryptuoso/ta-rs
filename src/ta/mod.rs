@@ -52,6 +52,8 @@ macro_rules! ta_ind_async {
   };
 }
 
+pub(crate) use ta_ind_async;
+
 macro_rules! ta_ind {
   ($src_name:ident,
     $src_js_name:literal,
@@ -81,6 +83,8 @@ macro_rules! ta_ind {
   };
 }
 
+pub(crate) use ta_ind;
+
 //ADX
 ta_ind!(
   ADX,
@@ -105,3 +109,25 @@ ta_ind!(
 
 //MACD
 pub mod macd;
+
+//Maximum
+ta_ind!(
+  Maximum,
+  "Maximum",
+  AsyncMaximum,
+  ta::indicators::Maximum,
+  u16,
+  f64,
+  f64
+);
+
+//Minimum
+ta_ind!(
+  Minimum,
+  "Minimum",
+  AsyncMinimum,
+  ta::indicators::Minimum,
+  u16,
+  f64,
+  f64
+);

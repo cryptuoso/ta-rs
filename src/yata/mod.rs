@@ -48,6 +48,8 @@ macro_rules! yata_method_async {
   };
 }
 
+pub(crate) use yata_method_async;
+
 macro_rules! yata_method {
   ($src_name:ident,
     $src_js_name:literal,
@@ -76,6 +78,8 @@ macro_rules! yata_method {
     }
   };
 }
+
+pub(crate) use yata_method;
 
 //SMA
 yata_method!(SMA, "SMA", AsyncSMA, yata::methods::SMA, u16, f64);
