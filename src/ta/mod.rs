@@ -84,6 +84,49 @@ macro_rules! ta_ind {
 }
 
 pub(crate) use ta_ind;
+//SMA
+ta_ind!(
+  Sma,
+  "Sma",
+  SmaTask,
+  ta::indicators::SimpleMovingAverage,
+  u16,
+  f64,
+  f64
+);
+
+//EMA
+ta_ind!(
+  EMA,
+  "EMA",
+  AsyncEMA,
+  ta::indicators::ExponentialMovingAverage,
+  u16,
+  f64,
+  f64
+);
+
+//WMA
+ta_ind!(
+  WMA,
+  "WMA",
+  AsyncWMA,
+  ta::indicators::WeightedMovingAverage,
+  u16,
+  f64,
+  f64
+);
+
+//ATR
+ta_ind!(
+  ATR,
+  "ATR",
+  AsyncATR,
+  ta::indicators::AverageTrueRange,
+  u16,
+  f64,
+  f64
+);
 
 //ADX
 ta_ind!(
@@ -127,6 +170,28 @@ ta_ind!(
   "Minimum",
   AsyncMinimum,
   ta::indicators::Minimum,
+  u16,
+  f64,
+  f64
+);
+
+//StandardDeviation
+ta_ind!(
+  StandardDeviation,
+  "StandardDeviation",
+  AsyncStandardDeviation,
+  ta::indicators::StandardDeviation,
+  u16,
+  f64,
+  f64
+);
+
+//MeanAbsoluteDeviation
+ta_ind!(
+  MeanAbsoluteDeviation,
+  "MeanAbsoluteDeviation",
+  AsyncMeanAbsoluteDeviation,
+  ta::indicators::MeanAbsoluteDeviation,
   u16,
   f64,
   f64

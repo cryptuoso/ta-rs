@@ -33,10 +33,21 @@ console.log(result) // current result
 
 ## Supports:
 
-- [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
-  - SMA
-  - WMA
+- [TA](https://github.com/virtualritz/ta-rs) - Technical Analysis for Rust
+  - ADX
+  - ATR
   - EMA
+  - MACD
+  - SMA
+  - RSI
+  - WMA
+  - Minimum
+  - Maximum
+  - StandardDeviation
+  - MeanAbsoluteDeviation
+- Other
+  - MaxADX (Maximum + ADX from TA)
+- [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
   - WSMA
   - RMA
   - SMM
@@ -50,23 +61,13 @@ console.log(result) // current result
   - Sum
   - ROC
   - TSI
-  - StDev
   - LinearVolatility
   - CCI
-  - MeanAbsDev
   - MedianAbsDev
   - Vidya
   - Cross
   - ReversalSignal
   - HighestLowestDelta
-- [TA](https://github.com/virtualritz/ta-rs) - Technical Analysis for Rust
-  - ADX
-  - RSI
-  - MACD
-  - Minimum
-  - Maximum
-- Other
-  - MaxADX (Maximum + ADX from TA)
 
 ---
 

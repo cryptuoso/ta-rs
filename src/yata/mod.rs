@@ -82,7 +82,7 @@ macro_rules! yata_method {
 pub(crate) use yata_method;
 
 //SMA
-yata_method!(SMA, "SMA", AsyncSMA, yata::methods::SMA, u16, f64);
+/*yata_method!(SMA, "SMA", AsyncSMA, yata::methods::SMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
 impl SMA {
@@ -95,10 +95,10 @@ impl SMA {
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}
+}*/
 
 //WMA
-yata_method!(WMA, "WMA", AsyncWMA, yata::methods::WMA, u16, f64);
+/*yata_method!(WMA, "WMA", AsyncWMA, yata::methods::WMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
 impl WMA {
@@ -106,10 +106,10 @@ impl WMA {
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}
+}*/
 
 //EMA
-yata_method!(EMA, "EMA", AsyncEMA, yata::methods::EMA, u16, f64);
+/*yata_method!(EMA, "EMA", AsyncEMA, yata::methods::EMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
 impl EMA {
@@ -117,7 +117,7 @@ impl EMA {
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}
+}*/
 
 //WSMA
 yata_method!(WSMA, "WSMA", AsyncWSMA, yata::methods::WSMA, u16, f64);
@@ -250,7 +250,7 @@ yata_method!(ROC, "ROC", AsyncROC, yata::methods::ROC, u16, f64);
 pub mod tsi;
 
 //StDev
-yata_method!(StDev, "StDev", AsyncStDev, yata::methods::StDev, u16, f64);
+//yata_method!(StDev, "StDev", AsyncStDev, yata::methods::StDev, u16, f64);
 
 //LinearVolatility
 yata_method!(
@@ -266,14 +266,14 @@ yata_method!(
 yata_method!(CCI, "CCI", AsyncCCI, yata::methods::CCI, u16, f64);
 
 //MeanAbsDev
-yata_method!(
+/*yata_method!(
   MeanAbsDev,
   "MeanAbsDev",
   AsyncMeanAbsDev,
   yata::methods::MeanAbsDev,
   u16,
   f64
-);
+);*/
 
 //MedianAbsDev
 yata_method!(
