@@ -1,5 +1,37 @@
+use crate::Candle;
+use ::ta::{Close, High, Low, Open, Volume};
 use napi::bindgen_prelude::*;
 use ta::Next;
+
+impl Open for Candle {
+  fn open(&self) -> f64 {
+    self.open
+  }
+}
+
+impl High for Candle {
+  fn high(&self) -> f64 {
+    self.high
+  }
+}
+
+impl Low for Candle {
+  fn low(&self) -> f64 {
+    self.low
+  }
+}
+
+impl Close for Candle {
+  fn close(&self) -> f64 {
+    self.close
+  }
+}
+
+impl Volume for Candle {
+  fn volume(&self) -> f64 {
+    self.volume
+  }
+}
 
 macro_rules! ta_ind_async {
   ($src_name:ident, $indicator_type: ty, $input_type: ty, $output_type: ty) => {

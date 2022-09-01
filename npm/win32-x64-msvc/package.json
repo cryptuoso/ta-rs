@@ -9,7 +9,7 @@
   ],
   "main": "ta-rs.win32-x64-msvc.node",
   "files": [
-    "@cryptuoso/ta-rs.win32-x64-msvc.node"
+    "ta-rs.win32-x64-msvc.node"
   ],
   "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "keywords": [

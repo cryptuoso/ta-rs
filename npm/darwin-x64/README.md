@@ -1,3 +1,3 @@
-# `ta-rs-darwin-x64`
+# `@cryptuoso/ta-rs-darwin-x64`
 
 This is the **x86_64-apple-darwin** binary for `ta-rs`

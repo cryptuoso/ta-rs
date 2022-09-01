@@ -9,7 +9,7 @@
   ],
   "main": "ta-rs.darwin-arm64.node",
   "files": [
-    "@cryptuoso/ta-rs.darwin-arm64.node"
+    "ta-rs.darwin-arm64.node"
   ],
   "description": "Node.js bindings for varios Rust based Technical Analysis methods and indicators",
   "keywords": [
