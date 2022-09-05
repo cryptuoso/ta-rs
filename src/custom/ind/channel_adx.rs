@@ -68,11 +68,11 @@ impl<T: High + Low> Next<&T> for ChannelAverageDirectionalIndex {
       && self.adx_series.len() == self.period + self.adx.period()
     {
       let value = cmp::max((self.ratio as f64 / current_adx).trunc() as usize, 1);
-      self.high = *self.high_series[&self.high_series.len() - value..]
+      self.high = *self.high_series[self.high_series.len() - value..]
         .iter()
         .max_by(|a, b| a.total_cmp(b))
         .unwrap();
-      self.low = *self.low_series[&self.low_series.len() - value..]
+      self.low = *self.low_series[self.low_series.len() - value..]
         .iter()
         .min_by(|a, b| a.total_cmp(b))
         .unwrap();

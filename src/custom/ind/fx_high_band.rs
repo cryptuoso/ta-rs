@@ -51,7 +51,7 @@ impl<T: Low> Next<&T> for FXHighBand {
 
       let mut std_dev_value: f64 = 0.0;
       for rsi_val in slice {
-        std_dev_value = self.std_dev.next(rsi_val.clone());
+        std_dev_value = self.std_dev.next(*rsi_val);
       }
       self.previous = current_rsi / 30.0 + std_dev_value * 1.3185 + self.modifier as f64;
 
