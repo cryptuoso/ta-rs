@@ -21,13 +21,13 @@ npm install ta-rs
 ## Use
 
 ```js
-import { SMA } from "ta-rs";
+import { SMA } from 'ta-rs'
 
-const sma = new SMA(5); // period = 5
-await sma.next(10); // first value = 10
-const result = await sma.next(20); // current value = 20
+const sma = new SMA(5) // period = 5
+await sma.next(10) // first value = 10
+const result = await sma.next(20) // current value = 20
 
-console.log(result); // current result = 15
+console.log(result) // current result = 15
 ```
 
 ## Supports:
@@ -44,8 +44,6 @@ console.log(result); // current result = 15
   - Maximum
   - StandardDeviation
   - MeanAbsoluteDeviation
-- Other
-  - MaxADX (Maximum + ADX from TA)
 - [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
   - WSMA
   - RMA

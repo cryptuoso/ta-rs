@@ -219,6 +219,9 @@ if (!nativeBinding) {
 }
 
 const {
+  ChanADX,
+  FXHighBand,
+  FXLowBand,
   MaxADX,
   SMA,
   EMA,
@@ -256,6 +259,9 @@ const {
   HighestLowestDelta,
 } = nativeBinding
 
+module.exports.ChanADX = ChanADX
+module.exports.FXHighBand = FXHighBand
+module.exports.FXLowBand = FXLowBand
 module.exports.MaxADX = MaxADX
 module.exports.SMA = SMA
 module.exports.EMA = EMA

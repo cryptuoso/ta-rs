@@ -11,10 +11,26 @@ export interface Candle {
   close: number
   volume: number
 }
+export interface ChanADXOutput {
+  high: number
+  low: number
+}
 export interface MACDOutput {
   macd: number
   signal: number
   histogram: number
+}
+export class ChanADX {
+  constructor(period: number, adxPeriod: number, ratio: number)
+  next(value: Candle): Promise<number>
+}
+export class FXHighBand {
+  constructor(period: number, rsiPeriod: number, modifier: number)
+  next(value: Candle): Promise<number>
+}
+export class FXLowBand {
+  constructor(period: number, rsiPeriod: number, modifier: number)
+  next(value: Candle): Promise<number>
 }
 export class MaxADX {
   constructor(period: number, adxPeriod: number)
