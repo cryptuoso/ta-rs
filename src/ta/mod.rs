@@ -118,15 +118,7 @@ ta_ind!(
 );
 
 //ATR
-ta_ind!(
-  ATR,
-  "ATR",
-  AsyncATR,
-  ta::indicators::AverageTrueRange,
-  u16,
-  f64,
-  f64
-);
+pub mod atr;
 
 //ADX
 ta_ind!(

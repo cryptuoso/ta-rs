@@ -50,7 +50,7 @@ export class WMA {
 }
 export class ATR {
   constructor(period: number)
-  next(value: number): Promise<number>
+  next(value: Candle): Promise<number>
 }
 export class ADX {
   constructor(period: number)
