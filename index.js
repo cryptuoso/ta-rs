@@ -219,21 +219,21 @@ if (!nativeBinding) {
 }
 
 const {
+  ADX,
   ChanADX,
   FXHighBand,
   FXLowBand,
   MaxADX,
   SMA,
   EMA,
-  WMA,
   ATR,
-  ADX,
   RSI,
   MACD,
   Maximum,
   Minimum,
   StandardDeviation,
   MeanAbsoluteDeviation,
+  WMA,
   WSMA,
   RMA,
   SMM,
@@ -259,21 +259,21 @@ const {
   HighestLowestDelta,
 } = nativeBinding
 
+module.exports.ADX = ADX
 module.exports.ChanADX = ChanADX
 module.exports.FXHighBand = FXHighBand
 module.exports.FXLowBand = FXLowBand
 module.exports.MaxADX = MaxADX
 module.exports.SMA = SMA
 module.exports.EMA = EMA
-module.exports.WMA = WMA
 module.exports.ATR = ATR
-module.exports.ADX = ADX
 module.exports.RSI = RSI
 module.exports.MACD = MACD
 module.exports.Maximum = Maximum
 module.exports.Minimum = Minimum
 module.exports.StandardDeviation = StandardDeviation
 module.exports.MeanAbsoluteDeviation = MeanAbsoluteDeviation
+module.exports.WMA = WMA
 module.exports.WSMA = WSMA
 module.exports.RMA = RMA
 module.exports.SMM = SMM

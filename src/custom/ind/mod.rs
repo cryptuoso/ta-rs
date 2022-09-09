@@ -13,3 +13,6 @@ pub use self::fx_low_band::FXLowBand;
 pub fn add_percent(value: f64, percent: f64) -> f64 {
   value + (value / 100.0) * percent
 }
+
+pub mod average_directional_index;
+pub use self::average_directional_index::AverageDirectionalIndex;

@@ -106,22 +106,11 @@ ta_ind!(
   f64
 );
 
-//WMA
-ta_ind!(
-  WMA,
-  "WMA",
-  AsyncWMA,
-  ta::indicators::WeightedMovingAverage,
-  u16,
-  f64,
-  f64
-);
-
 //ATR
 pub mod atr;
 
 //ADX
-ta_ind!(
+/*ta_ind!(
   ADX,
   "ADX",
   AsyncADX,
@@ -129,7 +118,7 @@ ta_ind!(
   u16,
   f64,
   f64
-);
+);*/
 
 //RSI
 ta_ind!(

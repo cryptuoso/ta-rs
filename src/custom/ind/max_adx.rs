@@ -1,5 +1,7 @@
 use std::fmt;
-use ta::{errors::Result, indicators::*, High, Next, Period, Reset};
+use ta::{errors::Result, indicators::Maximum, Close, High, Low, Next, Period, Reset};
+
+use super::AverageDirectionalIndex;
 
 /// Maximum Average Directional Index (MaxADX)
 ///
@@ -35,10 +37,10 @@ impl MaximumAverageDirectionalIndex {
   }
 }
 
-impl Next<f64> for MaximumAverageDirectionalIndex {
+impl<T: High + Low + Close> Next<&T> for MaximumAverageDirectionalIndex {
   type Output = f64;
 
-  fn next(&mut self, input: f64) -> Self::Output {
+  fn next(&mut self, input: &T) -> Self::Output {
     let current_adx = self.adx.next(input);
 
     let current = self.maximum.next(current_adx);
@@ -46,14 +48,6 @@ impl Next<f64> for MaximumAverageDirectionalIndex {
     self.previous = current;
 
     current
-  }
-}
-
-impl<T: High> Next<&T> for MaximumAverageDirectionalIndex {
-  type Output = f64;
-
-  fn next(&mut self, input: &T) -> Self::Output {
-    self.next(input.high())
   }
 }
 

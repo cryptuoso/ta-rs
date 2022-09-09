@@ -1,6 +1,9 @@
 use std::cmp;
 use std::fmt;
-use ta::{errors::Result, indicators::*, High, Low, Next, Period, Reset};
+use ta::Close;
+use ta::{errors::Result, High, Low, Next, Period, Reset};
+
+use super::AverageDirectionalIndex;
 
 #[napi(object, js_name = "ChanADXOutput")]
 pub struct ChanADXOutput {
@@ -46,7 +49,7 @@ impl ChannelAverageDirectionalIndex {
   }
 }
 
-impl<T: High + Low> Next<&T> for ChannelAverageDirectionalIndex {
+impl<T: High + Low + Close> Next<&T> for ChannelAverageDirectionalIndex {
   type Output = ChanADXOutput;
 
   fn next(&mut self, input: &T) -> Self::Output {

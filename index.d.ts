@@ -20,6 +20,10 @@ export interface MACDOutput {
   signal: number
   histogram: number
 }
+export class ADX {
+  constructor(period: number)
+  next(value: Candle): Promise<number>
+}
 export class ChanADX {
   constructor(period: number, adxPeriod: number, ratio: number)
   next(value: Candle): Promise<number>
@@ -34,7 +38,7 @@ export class FXLowBand {
 }
 export class MaxADX {
   constructor(period: number, adxPeriod: number)
-  next(value: number): Promise<number>
+  next(value: Candle): Promise<number>
 }
 export class SMA {
   constructor(period: number)
@@ -44,17 +48,9 @@ export class EMA {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class WMA {
-  constructor(period: number)
-  next(value: number): Promise<number>
-}
 export class ATR {
   constructor(period: number)
   next(value: Candle): Promise<number>
-}
-export class ADX {
-  constructor(period: number)
-  next(value: number): Promise<number>
 }
 export class RSI {
   constructor(period: number)
@@ -78,6 +74,10 @@ export class StandardDeviation {
 }
 export class MeanAbsoluteDeviation {
   constructor(period: number)
+  next(value: number): Promise<number>
+}
+export class WMA {
+  constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
 export class WSMA {

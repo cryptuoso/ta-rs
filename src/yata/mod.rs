@@ -98,7 +98,7 @@ impl SMA {
 }*/
 
 //WMA
-/*yata_method!(WMA, "WMA", AsyncWMA, yata::methods::WMA, u16, f64);
+yata_method!(WMA, "WMA", AsyncWMA, yata::methods::WMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
 impl WMA {
@@ -106,7 +106,7 @@ impl WMA {
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}*/
+}
 
 //EMA
 /*yata_method!(EMA, "EMA", AsyncEMA, yata::methods::EMA, u16, f64);

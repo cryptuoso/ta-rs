@@ -32,19 +32,18 @@ console.log(result) // current result = 15
 
 ## Supports:
 
-- [TA](https://github.com/virtualritz/ta-rs) - Technical Analysis for Rust
-  - ADX
+- [TA](https://github.com/greyblake/ta-rs) - Technical Analysis for Rust
   - ATR
   - EMA
   - MACD
   - SMA
   - RSI
-  - WMA
   - Minimum
   - Maximum
   - StandardDeviation
   - MeanAbsoluteDeviation
 - [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
+  - WMA
   - WSMA
   - RMA
   - SMM
@@ -65,6 +64,9 @@ console.log(result) // current result = 15
   - Cross
   - ReversalSignal
   - HighestLowestDelta
+- Custom
+  - ADX
+  - Maximum ADX
 
 ---
 

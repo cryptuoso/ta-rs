@@ -12,7 +12,7 @@ crate-type = ["cdylib"]
 [dependencies]
 napi = "2"
 napi-derive = "2"
-ta = { git = "https://github.com/virtualritz/ta-rs" }
+ta = "0.5.0"
 yata = {version= "0.6.1", features = ["period_type_u16"]}
 
 [build-dependencies]
