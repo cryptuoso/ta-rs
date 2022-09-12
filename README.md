@@ -68,6 +68,8 @@ console.log(result) // current result = 15
   - ReversalSignal
   - HighestLowestDelta
 - Custom (without prefix)
+  - ATR
+  - RSI
   - ADX
   - MaxADX
 

@@ -16,3 +16,9 @@ pub fn add_percent(value: f64, percent: f64) -> f64 {
 
 pub mod average_directional_index;
 pub use self::average_directional_index::AverageDirectionalIndex;
+
+pub mod average_true_range;
+pub use self::average_true_range::AverageTrueRange;
+
+pub mod relative_strength_index;
+pub use self::relative_strength_index::RelativeStrengthIndex;

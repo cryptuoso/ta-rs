@@ -1,5 +1,7 @@
 use std::fmt;
-use ta::{errors::Result, indicators::*, Low, Next, Period, Reset};
+use ta::{errors::Result, indicators::StandardDeviation, Low, Next, Period, Reset};
+
+use super::RelativeStrengthIndex;
 
 /// FXHighBand
 ///

@@ -220,10 +220,12 @@ if (!nativeBinding) {
 
 const {
   ADX,
+  ATR,
   ChanADX,
   FXHighBand,
   FXLowBand,
   MaxADX,
+  RSI,
   TaSMA,
   TaEMA,
   TaATR,
@@ -264,10 +266,12 @@ const {
 } = nativeBinding
 
 module.exports.ADX = ADX
+module.exports.ATR = ATR
 module.exports.ChanADX = ChanADX
 module.exports.FXHighBand = FXHighBand
 module.exports.FXLowBand = FXLowBand
 module.exports.MaxADX = MaxADX
+module.exports.RSI = RSI
 module.exports.TaSMA = TaSMA
 module.exports.TaEMA = TaEMA
 module.exports.TaATR = TaATR

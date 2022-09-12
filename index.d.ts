@@ -25,6 +25,10 @@ export class ADX {
   constructor(period: number)
   next(value: Candle): Promise<number>
 }
+export class ATR {
+  constructor(period: number)
+  next(value: Candle): Promise<number>
+}
 export class ChanADX {
   constructor(period: number, adxPeriod: number, ratio: number)
   next(value: Candle): Promise<ChanADXOutput>
@@ -40,6 +44,10 @@ export class FXLowBand {
 export class MaxADX {
   constructor(period: number, adxPeriod: number)
   next(value: Candle): Promise<number>
+}
+export class RSI {
+  constructor(period: number)
+  next(value: number): Promise<number>
 }
 export class TaSMA {
   constructor(period: number)
