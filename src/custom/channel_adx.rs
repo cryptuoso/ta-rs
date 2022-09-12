@@ -35,7 +35,7 @@ impl ChanADX {
     }
   }
 
-  #[napi(ts_return_type = "Promise<number>")]
+  #[napi(ts_return_type = "Promise<ChanADXOutput>")]
   pub fn next(&mut self, value: Candle) -> AsyncTask<AsyncChanADX> {
     AsyncTask::new(AsyncChanADX(&mut self.indicator, value))
   }

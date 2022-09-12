@@ -43,9 +43,12 @@ impl<T: High + Low + Close> Next<&T> for MaximumAverageDirectionalIndex {
   fn next(&mut self, input: &T) -> Self::Output {
     let current_adx = self.adx.next(input);
 
-    let current = self.maximum.next(current_adx);
+    let mut current = 0.0;
+    if current_adx > 0.0 {
+      current = self.maximum.next(current_adx);
 
-    self.previous = current;
+      self.previous = current;
+    }
 
     current
   }

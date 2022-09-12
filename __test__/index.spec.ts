@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import test from 'ava'
 
-import { SMA, ADX, ATR } from '../index'
+import { SMA, ADX, ATR, ChanADX } from '../index'
 
 test('SMA', async (t) => {
   const sma = new SMA(10)
@@ -38,6 +38,66 @@ test('ADX', async (t) => {
     volume: 56801.329,
   })
   t.is(result, 59.33684517024007)
+})
+
+test('ChanADX', async (t) => {
+  const adx = new ChanADX(2, 2, 2)
+  const firstResult = await adx.next({
+    time: 1577836800000,
+    open: 7189.43,
+    high: 7260.43,
+    low: 7170.15,
+    close: 7197.57,
+    volume: 56801.329,
+  })
+
+  t.is(firstResult.value, 0)
+  t.is(firstResult.high, 0)
+  t.is(firstResult.low, 0)
+  await adx.next({
+    time: 1577886800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  await adx.next({
+    time: 1577896800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  await adx.next({
+    time: 1577986800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  await adx.next({
+    time: 1579886800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  const result = await adx.next({
+    time: 1597896800000,
+    open: 9189.43,
+    high: 9260.43,
+    low: 9170.15,
+    close: 9197.57,
+    volume: 56801.329,
+  })
+
+  t.is(result.value, 1)
+  t.is(result.high, 9260.43)
+  t.is(result.low, 9170.15)
 })
 
 test('ATR', async (t) => {

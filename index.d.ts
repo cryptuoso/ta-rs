@@ -12,6 +12,7 @@ export interface Candle {
   volume: number
 }
 export interface ChanADXOutput {
+  value: number
   high: number
   low: number
 }
@@ -26,7 +27,7 @@ export class ADX {
 }
 export class ChanADX {
   constructor(period: number, adxPeriod: number, ratio: number)
-  next(value: Candle): Promise<number>
+  next(value: Candle): Promise<ChanADXOutput>
 }
 export class FXHighBand {
   constructor(period: number, rsiPeriod: number, modifier: number)

@@ -186,6 +186,13 @@ impl<T: High + Low + Close> Next<&T> for AverageDirectionalIndex {
 impl Reset for AverageDirectionalIndex {
   fn reset(&mut self) {
     self.previous = 0.0;
+    self.adx = 0.0;
+    self.atr = 0.0;
+    self.dmup = 0.0;
+    self.dmdown = 0.0;
+    self.prev_high = 0.0;
+    self.prev_low = 0.0;
+    self.prev_close = 0.0;
   }
 }
 
