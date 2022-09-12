@@ -96,6 +96,6 @@ console.log(result) // current result = 15
 ---
 
 <a href="https://napi.rs/">
-<img width="20" height="20" src="https://napi.rs/img/favicon.png">  
+<img width="15" height="15" src="https://napi.rs/img/favicon.png">  
 </a> 
-Build with awesome [NAPI-RS](https://napi.rs/) framework.
+Build with awesome <a href="https://napi.rs">NAPI-RS</a> framework.
