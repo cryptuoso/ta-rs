@@ -70,8 +70,8 @@ impl Next<f64> for RelativeStrengthIndex {
     };
 
     if self.processed == self.period - 1 {
-      self.smooth_up = self.smooth_up / (self.period as f64);
-      self.smooth_down = self.smooth_down / (self.period as f64);
+      self.smooth_up /= self.period as f64;
+      self.smooth_down /= self.period as f64;
       result = 100.0 * self.smooth_up / (self.smooth_up + self.smooth_down);
     }
 

@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use std::fmt;
 use ta::{errors::Result, Close, High, Low, Next, Period, Reset};
 
@@ -57,7 +58,6 @@ impl Period for AverageDirectionalIndex {
   }
 }
 
-#[deny(clippy::comparison_chain)]
 impl<T: High + Low + Close> Next<&T> for AverageDirectionalIndex {
   type Output = f64;
 
@@ -160,14 +160,18 @@ impl<T: High + Low + Close> Next<&T> for AverageDirectionalIndex {
       let dm_sum = di_up + di_down;
       let dx = dm_diff / dm_sum * 100.0;
 
-      if self.processed - self.period < self.period - 2 {
-        self.adx += dx;
-      } else if self.processed - self.period == self.period - 2 {
-        self.adx += dx;
-        result = self.adx * self.invper;
-      } else {
-        self.adx = self.adx * self.per + dx;
-        result = self.adx * self.invper;
+      match (self.processed - self.period).cmp(&(self.period - 2)) {
+        Ordering::Less => {
+          self.adx += dx;
+        }
+        Ordering::Equal => {
+          self.adx += dx;
+          result = self.adx * self.invper;
+        }
+        _ => {
+          self.adx = self.adx * self.per + dx;
+          result = self.adx * self.invper;
+        }
       }
     }
 
