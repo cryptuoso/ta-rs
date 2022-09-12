@@ -1,6 +1,6 @@
 {
   "name": "@cryptuoso/ta-rs-win32-arm64-msvc",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "os": [
     "win32"
   ],
