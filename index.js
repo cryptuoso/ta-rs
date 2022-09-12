@@ -224,39 +224,43 @@ const {
   FXHighBand,
   FXLowBand,
   MaxADX,
-  SMA,
-  EMA,
-  ATR,
-  RSI,
-  MACD,
-  Maximum,
-  Minimum,
-  StandardDeviation,
-  MeanAbsoluteDeviation,
-  WMA,
-  WSMA,
-  RMA,
-  SMM,
-  HMA,
-  SWMA,
-  LSMA,
-  Conv,
-  VWMA,
-  TRIMA,
-  Diff,
-  Sum,
-  Momentum,
-  ROC,
-  TSI,
-  LinearVolatility,
-  CCI,
-  MedianAbsDev,
-  Vidya,
-  Cross,
+  TaSMA,
+  TaEMA,
+  TaATR,
+  TaRSI,
+  TaMACD,
+  TaMaximum,
+  TaMinimum,
+  TaStandardDeviation,
+  TaMeanAbsoluteDeviation,
+  YataSMA,
+  YataWMA,
+  YataEMA,
+  YataWSMA,
+  YataRMA,
+  YataSMM,
+  YataHMA,
+  YataSWMA,
+  YataLSMA,
+  YataConv,
+  YataVWMA,
+  YataTRIMA,
+  YataDiff,
+  YataSum,
+  YataMomentum,
+  YataROC,
+  YataTSI,
+  YataStDev,
+  YataLinearVolatility,
+  YataCCI,
+  YataMeanAbsDev,
+  YataMedianAbsDev,
+  YataVidya,
+  YataCross,
   CrossAbove,
   CrossUnder,
-  ReversalSignal,
-  HighestLowestDelta,
+  YataReversalSignal,
+  YataHighestLowestDelta,
 } = nativeBinding
 
 module.exports.ADX = ADX
@@ -264,36 +268,40 @@ module.exports.ChanADX = ChanADX
 module.exports.FXHighBand = FXHighBand
 module.exports.FXLowBand = FXLowBand
 module.exports.MaxADX = MaxADX
-module.exports.SMA = SMA
-module.exports.EMA = EMA
-module.exports.ATR = ATR
-module.exports.RSI = RSI
-module.exports.MACD = MACD
-module.exports.Maximum = Maximum
-module.exports.Minimum = Minimum
-module.exports.StandardDeviation = StandardDeviation
-module.exports.MeanAbsoluteDeviation = MeanAbsoluteDeviation
-module.exports.WMA = WMA
-module.exports.WSMA = WSMA
-module.exports.RMA = RMA
-module.exports.SMM = SMM
-module.exports.HMA = HMA
-module.exports.SWMA = SWMA
-module.exports.LSMA = LSMA
-module.exports.Conv = Conv
-module.exports.VWMA = VWMA
-module.exports.TRIMA = TRIMA
-module.exports.Diff = Diff
-module.exports.Sum = Sum
-module.exports.Momentum = Momentum
-module.exports.ROC = ROC
-module.exports.TSI = TSI
-module.exports.LinearVolatility = LinearVolatility
-module.exports.CCI = CCI
-module.exports.MedianAbsDev = MedianAbsDev
-module.exports.Vidya = Vidya
-module.exports.Cross = Cross
+module.exports.TaSMA = TaSMA
+module.exports.TaEMA = TaEMA
+module.exports.TaATR = TaATR
+module.exports.TaRSI = TaRSI
+module.exports.TaMACD = TaMACD
+module.exports.TaMaximum = TaMaximum
+module.exports.TaMinimum = TaMinimum
+module.exports.TaStandardDeviation = TaStandardDeviation
+module.exports.TaMeanAbsoluteDeviation = TaMeanAbsoluteDeviation
+module.exports.YataSMA = YataSMA
+module.exports.YataWMA = YataWMA
+module.exports.YataEMA = YataEMA
+module.exports.YataWSMA = YataWSMA
+module.exports.YataRMA = YataRMA
+module.exports.YataSMM = YataSMM
+module.exports.YataHMA = YataHMA
+module.exports.YataSWMA = YataSWMA
+module.exports.YataLSMA = YataLSMA
+module.exports.YataConv = YataConv
+module.exports.YataVWMA = YataVWMA
+module.exports.YataTRIMA = YataTRIMA
+module.exports.YataDiff = YataDiff
+module.exports.YataSum = YataSum
+module.exports.YataMomentum = YataMomentum
+module.exports.YataROC = YataROC
+module.exports.YataTSI = YataTSI
+module.exports.YataStDev = YataStDev
+module.exports.YataLinearVolatility = YataLinearVolatility
+module.exports.YataCCI = YataCCI
+module.exports.YataMeanAbsDev = YataMeanAbsDev
+module.exports.YataMedianAbsDev = YataMedianAbsDev
+module.exports.YataVidya = YataVidya
+module.exports.YataCross = YataCross
 module.exports.CrossAbove = CrossAbove
 module.exports.CrossUnder = CrossUnder
-module.exports.ReversalSignal = ReversalSignal
-module.exports.HighestLowestDelta = HighestLowestDelta
+module.exports.YataReversalSignal = YataReversalSignal
+module.exports.YataHighestLowestDelta = YataHighestLowestDelta

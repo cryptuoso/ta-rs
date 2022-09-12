@@ -86,8 +86,8 @@ macro_rules! ta_ind {
 pub(crate) use ta_ind;
 //SMA
 ta_ind!(
-  SMA,
-  "SMA",
+  TaSMA,
+  "TaSMA",
   AsyncSMA,
   ta::indicators::SimpleMovingAverage,
   u16,
@@ -97,8 +97,8 @@ ta_ind!(
 
 //EMA
 ta_ind!(
-  EMA,
-  "EMA",
+  TaEMA,
+  "TaEMA",
   AsyncEMA,
   ta::indicators::ExponentialMovingAverage,
   u16,
@@ -109,21 +109,10 @@ ta_ind!(
 //ATR
 pub mod atr;
 
-//ADX
-/*ta_ind!(
-  ADX,
-  "ADX",
-  AsyncADX,
-  ta::indicators::AverageDirectionalIndex,
-  u16,
-  f64,
-  f64
-);*/
-
 //RSI
 ta_ind!(
-  RSI,
-  "RSI",
+  TaRSI,
+  "TaRSI",
   AsyncRSI,
   ta::indicators::RelativeStrengthIndex,
   u16,
@@ -136,8 +125,8 @@ pub mod macd;
 
 //Maximum
 ta_ind!(
-  Maximum,
-  "Maximum",
+  TaMaximum,
+  "TaMaximum",
   AsyncMaximum,
   ta::indicators::Maximum,
   u16,
@@ -147,8 +136,8 @@ ta_ind!(
 
 //Minimum
 ta_ind!(
-  Minimum,
-  "Minimum",
+  TaMinimum,
+  "TaMinimum",
   AsyncMinimum,
   ta::indicators::Minimum,
   u16,
@@ -158,8 +147,8 @@ ta_ind!(
 
 //StandardDeviation
 ta_ind!(
-  StandardDeviation,
-  "StandardDeviation",
+  TaStandardDeviation,
+  "TaStandardDeviation",
   AsyncStandardDeviation,
   ta::indicators::StandardDeviation,
   u16,
@@ -169,8 +158,8 @@ ta_ind!(
 
 //MeanAbsoluteDeviation
 ta_ind!(
-  MeanAbsoluteDeviation,
-  "MeanAbsoluteDeviation",
+  TaMeanAbsoluteDeviation,
+  "TaMeanAbsoluteDeviation",
   AsyncMeanAbsoluteDeviation,
   ta::indicators::MeanAbsoluteDeviation,
   u16,

@@ -1,8 +1,8 @@
 use napi::bindgen_prelude::*;
 use ta::Next;
 
-#[napi(object, js_name = "MACDOutput")]
-pub struct MACDOutput {
+#[napi(object, js_name = "TaMACDOutput")]
+pub struct TaMACDOutput {
   pub macd: f64,
   pub signal: f64,
   pub histogram: f64,
@@ -14,13 +14,13 @@ struct AsyncMACD<'a>(
 );
 
 impl napi::Task for AsyncMACD<'_> {
-  type Output = MACDOutput;
-  type JsValue = MACDOutput;
+  type Output = TaMACDOutput;
+  type JsValue = TaMACDOutput;
 
   fn compute(&mut self) -> napi::Result<Self::Output> {
     let result = self.0.next(self.1);
 
-    Ok(MACDOutput {
+    Ok(TaMACDOutput {
       macd: result.macd,
       signal: result.signal,
       histogram: result.histogram,
@@ -32,15 +32,15 @@ impl napi::Task for AsyncMACD<'_> {
   }
 }
 
-#[napi(js_name = "MACD")]
+#[napi(js_name = "TaMACD")]
 #[allow(dead_code)]
-struct MACD {
+struct TaMACD {
   indicator: ta::indicators::MovingAverageConvergenceDivergence,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl MACD {
+impl TaMACD {
   #[napi(constructor)]
   pub fn new(fast_period: u16, slow_period: u16, signal_period: u16) -> Self {
     Self {
@@ -53,7 +53,7 @@ impl MACD {
     }
   }
 
-  #[napi(ts_return_type = "Promise<MACDOutput>")]
+  #[napi(ts_return_type = "Promise<TaMACDOutput>")]
   pub fn next(&mut self, value: f64) -> AsyncTask<AsyncMACD> {
     AsyncTask::new(AsyncMACD(&mut self.indicator, value))
   }

@@ -18,15 +18,15 @@ impl napi::Task for AsyncATR<'_> {
   }
 }
 
-#[napi(js_name = "ATR")]
+#[napi(js_name = "TaATR")]
 #[allow(dead_code)]
-struct ATR {
+struct TaATR {
   indicator: ta::indicators::AverageTrueRange,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl ATR {
+impl TaATR {
   #[napi(constructor)]
   pub fn new(period: u16) -> Self {
     Self {

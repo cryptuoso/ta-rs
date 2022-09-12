@@ -21,9 +21,9 @@ npm install ta-rs
 ## Use
 
 ```js
-import { SMA } from 'ta-rs'
+import { TaSMA } from 'ta-rs'
 
-const sma = new SMA(5) // period = 5
+const sma = new TaSMA(5) // period = 5
 await sma.next(10) // first value = 10
 const result = await sma.next(20) // current value = 20
 
@@ -32,7 +32,7 @@ console.log(result) // current result = 15
 
 ## Supports:
 
-- [TA](https://github.com/greyblake/ta-rs) - Technical Analysis for Rust
+- [TA](https://github.com/greyblake/ta-rs) - Technical Analysis for Rust (available with 'Ta' prefix)
   - ATR
   - EMA
   - MACD
@@ -42,8 +42,10 @@ console.log(result) // current result = 15
   - Maximum
   - StandardDeviation
   - MeanAbsoluteDeviation
-- [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library
+- [YATA](https://github.com/amv-dev/yata) - Yet Another Technical Analysis library (available with 'Yata' prefix)
+  - SMA
   - WMA
+  - EMA
   - WSMA
   - RMA
   - SMM
@@ -57,6 +59,7 @@ console.log(result) // current result = 15
   - Sum
   - ROC
   - TSI
+  - StDev
   - LinearVolatility
   - CCI
   - MedianAbsDev
@@ -64,9 +67,9 @@ console.log(result) // current result = 15
   - Cross
   - ReversalSignal
   - HighestLowestDelta
-- Custom
+- Custom (without prefix)
   - ADX
-  - Maximum ADX
+  - MaxADX
 
 ---
 
@@ -87,3 +90,10 @@ console.log(result) // current result = 15
 | Android arm64    | x      | x      | x      |
 | Android armv7    | x      | x      | x      |
 | FreeBSD x64      | x      | x      | x      |
+
+---
+
+<a href="https://napi.rs/">
+<img width="20" height="20" src="https://napi.rs/img/favicon.png">  
+</a> 
+Build with awesome [NAPI-RS](https://napi.rs/) framework.

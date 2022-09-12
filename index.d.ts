@@ -16,7 +16,7 @@ export interface ChanADXOutput {
   high: number
   low: number
 }
-export interface MACDOutput {
+export interface TaMACDOutput {
   macd: number
   signal: number
   histogram: number
@@ -41,124 +41,140 @@ export class MaxADX {
   constructor(period: number, adxPeriod: number)
   next(value: Candle): Promise<number>
 }
-export class SMA {
+export class TaSMA {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class EMA {
+export class TaEMA {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class ATR {
+export class TaATR {
   constructor(period: number)
   next(value: Candle): Promise<number>
 }
-export class RSI {
+export class TaRSI {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class MACD {
+export class TaMACD {
   constructor(fastPeriod: number, slowPeriod: number, signalPeriod: number)
-  next(value: number): Promise<MACDOutput>
+  next(value: number): Promise<TaMACDOutput>
 }
-export class Maximum {
+export class TaMaximum {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class Minimum {
+export class TaMinimum {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class StandardDeviation {
+export class TaStandardDeviation {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class MeanAbsoluteDeviation {
+export class TaMeanAbsoluteDeviation {
   constructor(period: number)
   next(value: number): Promise<number>
 }
-export class WMA {
+export class YataSMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class WSMA {
+export class YataWMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class RMA {
+export class YataEMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class SMM {
+export class YataWSMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class HMA {
+export class YataRMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class SWMA {
+export class YataSMM {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class LSMA {
+export class YataHMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class Conv {
+export class YataSWMA {
+  constructor(period: number, initial: number)
+  next(value: number): Promise<number>
+}
+export class YataLSMA {
+  constructor(period: number, initial: number)
+  next(value: number): Promise<number>
+}
+export class YataConv {
   constructor(weights: Array<number>, initial: number)
   next(value: number): Promise<number>
   getLastValue(): number
 }
-export class VWMA {
+export class YataVWMA {
   constructor(period: number, initial: Array<number>)
   next(values: Array<number>): Promise<number>
   getLastValue(): number
 }
-export class TRIMA {
+export class YataTRIMA {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class Diff {
+export class YataDiff {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class Sum {
+export class YataSum {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
   getLastValue(): number
 }
-export class Momentum {
+export class YataMomentum {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class ROC {
+export class YataROC {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class TSI {
+export class YataTSI {
   constructor(shortPeriod: number, longPeriod: number, initial: number)
   next(value: number): Promise<number>
   getLastValue(): number
 }
-export class LinearVolatility {
+export class YataStDev {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class CCI {
+export class YataLinearVolatility {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class MedianAbsDev {
+export class YataCCI {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
 }
-export class Vidya {
+export class YataMeanAbsDev {
+  constructor(period: number, initial: number)
+  next(value: number): Promise<number>
+}
+export class YataMedianAbsDev {
+  constructor(period: number, initial: number)
+  next(value: number): Promise<number>
+}
+export class YataVidya {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
   getLastValue(): number
 }
-export class Cross {
+export class YataCross {
   constructor(initial: Array<number>)
   next(values: Array<number>): Promise<number>
 }
@@ -170,11 +186,11 @@ export class CrossUnder {
   constructor(initial: Array<number>)
   next(values: Array<number>): Promise<number>
 }
-export class ReversalSignal {
+export class YataReversalSignal {
   constructor(left: number, right: number, initial: number)
   next(value: number): Promise<number>
 }
-export class HighestLowestDelta {
+export class YataHighestLowestDelta {
   constructor(period: number, initial: number)
   next(value: number): Promise<number>
   getLastValue(): number

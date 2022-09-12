@@ -15,15 +15,15 @@ impl napi::Task for AsyncVWMA<'_> {
     Ok(output)
   }
 }
-#[napi(js_name = "VWMA")]
+#[napi(js_name = "YataVWMA")]
 #[allow(dead_code)]
-struct VWMA {
+struct YataVWMA {
   indicator: yata::methods::VWMA,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl VWMA {
+impl YataVWMA {
   #[napi(constructor)]
   pub fn new(period: u16, initial: Vec<f64>) -> Self {
     let initial = match initial.len() {

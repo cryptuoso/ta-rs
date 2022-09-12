@@ -16,15 +16,15 @@ impl napi::Task for AsyncCross<'_> {
     Ok(output)
   }
 }
-#[napi]
+#[napi(js_name = "YataCross")]
 #[allow(dead_code)]
-struct Cross {
+struct YataCross {
   indicator: yata::methods::Cross,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl Cross {
+impl YataCross {
   #[napi(constructor)]
   pub fn new(initial: Vec<f64>) -> Self {
     let initial = match initial.len() {

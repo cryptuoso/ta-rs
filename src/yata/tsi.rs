@@ -2,15 +2,15 @@ use napi::bindgen_prelude::*;
 use yata::prelude::*;
 
 yata_method_async!(AsyncTSI, yata::methods::TSI, f64);
-#[napi(js_name = "TSI")]
+#[napi(js_name = "YataTSI")]
 #[allow(dead_code)]
-struct TSI {
+struct YataTSI {
   indicator: yata::methods::TSI,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl TSI {
+impl YataTSI {
   #[napi(constructor)]
   pub fn new(short_period: u16, long_period: u16, initial: f64) -> Self {
     Self {

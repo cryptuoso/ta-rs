@@ -16,15 +16,15 @@ impl napi::Task for AsyncReversalSignal<'_> {
     Ok(output)
   }
 }
-#[napi]
+#[napi(js_name = "YataReversalSignal")]
 #[allow(dead_code)]
-struct ReversalSignal {
+struct YataReversalSignal {
   indicator: yata::methods::ReversalSignal,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl ReversalSignal {
+impl YataReversalSignal {
   #[napi(constructor)]
   pub fn new(left: u16, right: u16, initial: f64) -> Self {
     Self {

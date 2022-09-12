@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import test from 'ava'
 
-import { SMA, ADX, ATR, ChanADX } from '../index'
+import { TaSMA, ADX, TaATR, ChanADX } from '../index'
 
-test('SMA', async (t) => {
-  const sma = new SMA(10)
+test('TaSMA', async (t) => {
+  const sma = new TaSMA(10)
   await sma.next(10)
   const result = await sma.next(20)
   t.is(result, 15)
@@ -100,8 +100,8 @@ test('ChanADX', async (t) => {
   t.is(result.low, 9170.15)
 })
 
-test('ATR', async (t) => {
-  const atr = new ATR(30)
+test('TaATR', async (t) => {
+  const atr = new TaATR(30)
   const result = await atr.next({
     time: 1577836800000,
     open: 7189.43,

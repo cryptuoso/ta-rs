@@ -2,15 +2,15 @@ use napi::bindgen_prelude::*;
 use yata::prelude::*;
 
 yata_method_async!(AsyncConv, yata::methods::Conv, f64);
-#[napi]
+#[napi(js_name = "YataConv")]
 #[allow(dead_code)]
-struct Conv {
+struct YataConv {
   indicator: yata::methods::Conv,
 }
 
 #[napi]
 #[allow(dead_code)]
-impl Conv {
+impl YataConv {
   #[napi(constructor)]
   pub fn new(weights: Vec<f64>, initial: f64) -> Self {
     Self {

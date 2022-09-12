@@ -82,10 +82,10 @@ macro_rules! yata_method {
 pub(crate) use yata_method;
 
 //SMA
-/*yata_method!(SMA, "SMA", AsyncSMA, yata::methods::SMA, u16, f64);
+yata_method!(YataSMA, "YataSMA", AsyncSMA, yata::methods::SMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl SMA {
+impl YataSMA {
   #[napi]
   pub fn get(&self, index: u16) -> Option<f64> {
     self.indicator.get_window().get(index).copied()
@@ -95,13 +95,13 @@ impl SMA {
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}*/
+}
 
 //WMA
-yata_method!(WMA, "WMA", AsyncWMA, yata::methods::WMA, u16, f64);
+yata_method!(YataWMA, "YataWMA", AsyncWMA, yata::methods::WMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl WMA {
+impl YataWMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -109,21 +109,28 @@ impl WMA {
 }
 
 //EMA
-/*yata_method!(EMA, "EMA", AsyncEMA, yata::methods::EMA, u16, f64);
+yata_method!(YataEMA, "YataEMA", AsyncEMA, yata::methods::EMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl EMA {
+impl YataEMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
   }
-}*/
+}
 
 //WSMA
-yata_method!(WSMA, "WSMA", AsyncWSMA, yata::methods::WSMA, u16, f64);
+yata_method!(
+  YataWSMA,
+  "YataWSMA",
+  AsyncWSMA,
+  yata::methods::WSMA,
+  u16,
+  f64
+);
 #[napi]
 #[allow(dead_code)]
-impl WSMA {
+impl YataWSMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -131,10 +138,10 @@ impl WSMA {
 }
 
 //RMA
-yata_method!(RMA, "RMA", AsyncRMA, yata::methods::RMA, u16, f64);
+yata_method!(YataRMA, "YataRMA", AsyncRMA, yata::methods::RMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl RMA {
+impl YataRMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -142,10 +149,10 @@ impl RMA {
 }
 
 //SMM
-yata_method!(SMM, "SMM", AsyncSMM, yata::methods::SMM, u16, f64);
+yata_method!(YataSMM, "YataSMM", AsyncSMM, yata::methods::SMM, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl SMM {
+impl YataSMM {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -153,10 +160,10 @@ impl SMM {
 }
 
 //HMA
-yata_method!(HMA, "HMA", AsyncHMA, yata::methods::HMA, u16, f64);
+yata_method!(YataHMA, "YataHMA", AsyncHMA, yata::methods::HMA, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl HMA {
+impl YataHMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -164,10 +171,17 @@ impl HMA {
 }
 
 //SWMA
-yata_method!(SWMA, "SWMA", AsyncSWMA, yata::methods::SWMA, u16, f64);
+yata_method!(
+  YataSWMA,
+  "YataSWMA",
+  AsyncSWMA,
+  yata::methods::SWMA,
+  u16,
+  f64
+);
 #[napi]
 #[allow(dead_code)]
-impl SWMA {
+impl YataSWMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -175,10 +189,17 @@ impl SWMA {
 }
 
 //LSMA
-yata_method!(LSMA, "LSMA", AsyncLSMA, yata::methods::LSMA, u16, f64);
+yata_method!(
+  YataLSMA,
+  "YataLSMA",
+  AsyncLSMA,
+  yata::methods::LSMA,
+  u16,
+  f64
+);
 #[napi]
 #[allow(dead_code)]
-impl LSMA {
+impl YataLSMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -202,10 +223,17 @@ pub mod conv;
 pub mod vwma;
 
 //TRIMA
-yata_method!(TRIMA, "TRIMA", AsyncTRIMA, yata::methods::TRIMA, u16, f64);
+yata_method!(
+  YataTRIMA,
+  "YataTRIMA",
+  AsyncTRIMA,
+  yata::methods::TRIMA,
+  u16,
+  f64
+);
 #[napi]
 #[allow(dead_code)]
-impl TRIMA {
+impl YataTRIMA {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -214,8 +242,8 @@ impl TRIMA {
 
 //Differential
 yata_method!(
-  Diff,
-  "Diff",
+  YataDiff,
+  "YataDiff",
   AsyncDiff,
   yata::methods::Differential,
   u16,
@@ -223,10 +251,10 @@ yata_method!(
 );
 
 //Sum
-yata_method!(Sum, "Sum", AsyncSum, yata::methods::Sum, u16, f64);
+yata_method!(YataSum, "YataSum", AsyncSum, yata::methods::Sum, u16, f64);
 #[napi]
 #[allow(dead_code)]
-impl Sum {
+impl YataSum {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -235,8 +263,8 @@ impl Sum {
 
 //Momentum
 yata_method!(
-  Momentum,
-  "Momentum",
+  YataMomentum,
+  "YataMomentum",
   AsyncMomentum,
   yata::methods::Momentum,
   u16,
@@ -244,18 +272,25 @@ yata_method!(
 );
 
 //ROC
-yata_method!(ROC, "ROC", AsyncROC, yata::methods::ROC, u16, f64);
+yata_method!(YataROC, "YataROC", AsyncROC, yata::methods::ROC, u16, f64);
 
 //TSI
 pub mod tsi;
 
 //StDev
-//yata_method!(StDev, "StDev", AsyncStDev, yata::methods::StDev, u16, f64);
+yata_method!(
+  YataStDev,
+  "YataStDev",
+  AsyncStDev,
+  yata::methods::StDev,
+  u16,
+  f64
+);
 
 //LinearVolatility
 yata_method!(
-  LinearVolatility,
-  "LinearVolatility",
+  YataLinearVolatility,
+  "YataLinearVolatility",
   AsyncLinearVolatility,
   yata::methods::LinearVolatility,
   u16,
@@ -263,22 +298,22 @@ yata_method!(
 );
 
 //CCI
-yata_method!(CCI, "CCI", AsyncCCI, yata::methods::CCI, u16, f64);
+yata_method!(YataCCI, "YataCCI", AsyncCCI, yata::methods::CCI, u16, f64);
 
 //MeanAbsDev
-/*yata_method!(
-  MeanAbsDev,
-  "MeanAbsDev",
+yata_method!(
+  YataMeanAbsDev,
+  "YataMeanAbsDev",
   AsyncMeanAbsDev,
   yata::methods::MeanAbsDev,
   u16,
   f64
-);*/
+);
 
 //MedianAbsDev
 yata_method!(
-  MedianAbsDev,
-  "MedianAbsDev",
+  YataMedianAbsDev,
+  "YataMedianAbsDev",
   AsyncMedianAbsDev,
   yata::methods::MedianAbsDev,
   u16,
@@ -286,10 +321,17 @@ yata_method!(
 );
 
 //Vidya
-yata_method!(Vidya, "Vidya", AsyncVidya, yata::methods::Vidya, u16, f64);
+yata_method!(
+  YataVidya,
+  "YataVidya",
+  AsyncVidya,
+  yata::methods::Vidya,
+  u16,
+  f64
+);
 #[napi]
 #[allow(dead_code)]
-impl Vidya {
+impl YataVidya {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
@@ -304,8 +346,8 @@ pub mod reversal;
 
 //HighestLowestDelta
 yata_method!(
-  HighestLowestDelta,
-  "HighestLowestDelta",
+  YataHighestLowestDelta,
+  "YataHighestLowestDelta",
   AsyncHighestLowestDelta,
   yata::methods::HighestLowestDelta,
   u16,
@@ -313,7 +355,7 @@ yata_method!(
 );
 #[napi]
 #[allow(dead_code)]
-impl HighestLowestDelta {
+impl YataHighestLowestDelta {
   #[napi]
   pub fn get_last_value(&self) -> f64 {
     self.indicator.peek()
