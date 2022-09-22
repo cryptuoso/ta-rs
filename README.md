@@ -2,15 +2,12 @@
  <img align="left" width="150" height="150" src="https://cryptuoso.com/favicon_color.svg">  
 </a> 
 <br>
-
 <h2 align="center"><a href="https://cryptuoso.com">Cryptuoso - Cryptocurrency Trading Automation</a></h2>
 <h2 align="center">ta-rs</h3>
 <h3 align="center">Node.js bindings for varios Rust based Technical Analysis methods and indicators</h3>
 <br>
 <br>
 <br>
-
-### ⚠️ Under development! ⚠️
 
 ## Install
 
@@ -72,6 +69,7 @@ console.log(result) // current result = 15
   - RSI
   - ADX
   - MaxADX
+  - RachSupTrend - https://www.tradingview.com/script/baEa7vSy-Supertrend-V1-0-Buy-or-Sell-Signal/
 
 ---
 
@@ -98,4 +96,4 @@ console.log(result) // current result = 15
 <a href="https://napi.rs/">
 <img width="15" height="15" src="https://napi.rs/img/favicon.png">  
 </a> 
-Build with awesome <a href="https://napi.rs">NAPI-RS</a> framework.
+Built with awesome <a href="https://napi.rs">NAPI-RS</a> framework.

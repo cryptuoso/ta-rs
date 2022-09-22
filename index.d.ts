@@ -16,6 +16,12 @@ export interface ChanADXOutput {
   high: number
   low: number
 }
+export interface RachSupTrendOutput {
+  buy: number
+  sell: number
+  buyEntry: number
+  sellEntry: number
+}
 export interface TaMACDOutput {
   macd: number
   signal: number
@@ -44,6 +50,10 @@ export class FXLowBand {
 export class MaxADX {
   constructor(period: number, adxPeriod: number)
   next(value: Candle): Promise<number>
+}
+export class RachSupTrend {
+  constructor(period: number, factor: number)
+  next(value: Candle): Promise<RachSupTrendOutput>
 }
 export class RSI {
   constructor(period: number)

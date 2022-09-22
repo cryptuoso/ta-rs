@@ -10,6 +10,7 @@ pub mod channel_adx;
 pub mod fx_high_band;
 pub mod fx_low_band;
 pub mod max_adx;
+pub mod rach_sup_trend;
 
 ta_ind!(
   RSI,

@@ -225,6 +225,7 @@ const {
   FXHighBand,
   FXLowBand,
   MaxADX,
+  RachSupTrend,
   RSI,
   TaSMA,
   TaEMA,
@@ -271,6 +272,7 @@ module.exports.ChanADX = ChanADX
 module.exports.FXHighBand = FXHighBand
 module.exports.FXLowBand = FXLowBand
 module.exports.MaxADX = MaxADX
+module.exports.RachSupTrend = RachSupTrend
 module.exports.RSI = RSI
 module.exports.TaSMA = TaSMA
 module.exports.TaEMA = TaEMA

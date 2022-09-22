@@ -22,3 +22,7 @@ pub use self::average_true_range::AverageTrueRange;
 
 pub mod relative_strength_index;
 pub use self::relative_strength_index::RelativeStrengthIndex;
+
+
+pub mod rajandran_super_trend;
+pub use self::rajandran_super_trend::RajandranSuperTrend;

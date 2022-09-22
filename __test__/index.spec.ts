@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import test from 'ava'
 
-import { TaSMA, ADX, TaATR, ChanADX } from '../index'
+import { TaSMA, ADX, TaATR, ChanADX, RachSupTrend } from '../index'
 
 test('TaSMA', async (t) => {
   const sma = new TaSMA(10)
@@ -111,6 +111,93 @@ test('TaATR', async (t) => {
     volume: 56801.329,
   })
   t.is(result, 90.28000000000065)
+})
+
+test('RST', async (t) => {
+  const rst = new RachSupTrend(2, 2)
+
+  const firstResult = await rst.next({
+    time: 1577836800000,
+    open: 7189.43,
+    high: 7260.43,
+    low: 7170.15,
+    close: 7197.57,
+    volume: 56801.329,
+  })
+
+  t.is(firstResult.buy, 0)
+  t.is(firstResult.sell, 0)
+  t.is(firstResult.buyEntry, 0)
+  t.is(firstResult.sellEntry, 0)
+  await rst.next({
+    time: 1577886800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1577896800000,
+    open: 3189.43,
+    high: 3260.43,
+    low: 3170.15,
+    close: 3197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1577896800000,
+    open: 2189.43,
+    high: 2260.43,
+    low: 2170.15,
+    close: 2197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1577896800000,
+    open: 1189.43,
+    high: 1260.43,
+    low: 1170.15,
+    close: 1197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1577896800000,
+    open: 2189.43,
+    high: 2260.43,
+    low: 2170.15,
+    close: 2197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1577986800000,
+    open: 3189.43,
+    high: 3260.43,
+    low: 3170.15,
+    close: 3197.57,
+    volume: 56801.329,
+  })
+  await rst.next({
+    time: 1579886800000,
+    open: 4189.43,
+    high: 4260.43,
+    low: 4170.15,
+    close: 4197.57,
+    volume: 56801.329,
+  })
+  const result = await rst.next({
+    time: 1597896800000,
+    open: 2189.43,
+    high: 2260.43,
+    low: 2170.15,
+    close: 2197.57,
+    volume: 56801.329,
+  })
+
+  t.is(result.buy, 0)
+  t.is(result.sell, 0)
+  t.is(result.buyEntry, 0)
+  t.is(result.sellEntry, 0)
 })
 
 //TODO: add more tests
